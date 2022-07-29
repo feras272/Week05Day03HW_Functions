@@ -13,11 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_second"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/tv_start_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Result here.."
         android:layout_margin="8dp"
         android:textStyle="bold"
         android:textSize="16sp"
@@ -34,5 +41,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_start_activity_main"/>
+
+    <TextView
+        android:id="@+id/tv_tax_activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result here.."
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line_second" />
+
+    <Button
+        android:id="@+id/btn_tax_activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tax_activity_main"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
