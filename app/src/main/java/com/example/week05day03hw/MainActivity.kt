@@ -44,10 +44,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun Double.addTax() {
-        val VAT:Double = this * 0.15
-        val finalAmount:Double = VAT + this
+        buttonTax?.setOnClickListener {
+            val VAT:Double = this * 0.15
+            val finalAmount:Double = VAT + this
 
-        Toast.makeText(this@MainActivity, finalAmount.toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, finalAmount.toString(), Toast.LENGTH_LONG).show()
+        }
+
 
     }
 
