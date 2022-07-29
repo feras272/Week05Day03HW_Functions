@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     private var textViewStart:TextView? = null
     private var buttonStart:Button? = null
+    private var textViewTax:TextView? = null
+    private var buttonTax:Button? = null
     private var price:Double = 100.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     private fun connectViews() {
         textViewStart = findViewById(R.id.tv_start_activity_main)
         buttonStart = findViewById(R.id.btn_start_activity_main)
+        textViewTax = findViewById(R.id.tv_tax_activity_main)
+        buttonTax = findViewById(R.id.btn_tax_activity_main)
     }
 
     private fun printFullName(vararg fullName:String) {
