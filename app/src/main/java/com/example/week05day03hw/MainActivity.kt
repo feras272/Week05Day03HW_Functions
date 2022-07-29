@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         buttonTax?.setOnClickListener {
             val VAT:Double = this * 0.15
             val finalAmount:Double = VAT + this
-
+            textViewTax?.text = finalAmount.toString()
             Toast.makeText(this@MainActivity, finalAmount.toString(), Toast.LENGTH_LONG).show()
         }
 
