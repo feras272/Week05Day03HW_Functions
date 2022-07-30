@@ -2,4 +2,6 @@
     <string name="app_name">Week05Day03HW</string>
     <string name="start">Start here</string>
     <string name="tax">Show tax</string>
+    <string name="show_text">Show text</string>
+    <string name="result_here">Result here..</string>
 </resources>
