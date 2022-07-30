@@ -15,14 +15,17 @@ class MainActivity : AppCompatActivity() {
     private var price:Double = 100.0
     private var buttonLetters:Button? = null
     private var textViewLetters:TextView? = null
+    private var sampleString:String = "Feras Alnowiser"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         connectViews()
-            printFullName("Feras", "Nasser", "Alnowiser")
-            price.addTax()
+        printFullName("Feras", "Nasser", "Alnowiser")
+        price.addTax()
+
+        sampleString.printLetters()
 
     }
 
@@ -53,6 +56,18 @@ class MainActivity : AppCompatActivity() {
             val finalAmount:Double = VAT + this
             textViewTax?.text = finalAmount.toString()
             Toast.makeText(this@MainActivity, finalAmount.toString(), Toast.LENGTH_LONG).show()
+        }
+
+
+    }
+
+    private fun String.printLetters() {
+
+        buttonLetters?.setOnClickListener {
+
+            textViewLetters?.text = this.length.toString()
+            Toast.makeText(this@MainActivity,
+                "Length of the string is ${this.length}", Toast.LENGTH_LONG).show()
         }
 
 
